@@ -32,7 +32,9 @@ namespace MembershipRegister.API.Controllers
             customer.paidFor = paidFor;
 
             _membershipDbContext.Customers.Add(customer);
+
             _membershipDbContext.SaveChanges();
+
             return Ok(customer);
         }
 

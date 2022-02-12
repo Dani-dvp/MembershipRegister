@@ -29,7 +29,9 @@ namespace MembershipRegister.API.Controllers
             competition.name = name;
             competition.description = description;
             competition.winner = winner;
+
             _membershipDbContext.Competitions.Add(competition);
+
             _membershipDbContext.SaveChanges();
 
             return Ok(competition);
