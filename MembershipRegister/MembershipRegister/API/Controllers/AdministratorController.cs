@@ -31,5 +31,20 @@ namespace MembershipRegister.API.Controllers
 
             return admin;
         }
+
+        [HttpGet("login")]
+        public ActionResult<Administrator> LoginAsAdministrator(string userName, string password)
+        {
+            var admins = _membershipDbContext.Administrators.ToList();
+            var response = new Administrator();
+            for(int i = 0; i < admins.Count; i++)
+            {
+                if(admins[i].userName == userName && admins[i].password == password)
+                {
+                    response = admins[i];
+                }
+            }
+            return response;
+        }
     }
 }
