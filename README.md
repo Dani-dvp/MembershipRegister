@@ -10,7 +10,7 @@ Clone the project and open in visual studio.
 
 # Update database
 
-Open Package manager console
+Open Package manager console    
 Enter - Update-Database
 
 # Start the project
